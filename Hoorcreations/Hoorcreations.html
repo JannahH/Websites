@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title> Hoorcreations </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Antic Didone' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Ruda' rel='stylesheet'>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+
+			body {
+    			background-color:#07112a;
+				margin:0;
+			}
+
+			ul {
+    			list-style-type: none;
+    			margin: 0;
+    			padding: 0;
+    			overflow: hidden;
+    			background-color: #a8b7d8;
+			}
+
+			li {
+    			float: left;
+			}
+
+			li a {
+    			display: block;
+    			color: #07112a;
+    			font-family: 'Ruda';
+    			font-size:18px;
+    			text-align: center;
+    			padding: 20px 16px;
+    			text-decoration: none;
+			}
+
+			li a:hover:not(.active) {
+   				background-color: #07112a;
+    			color: #a8b7d8;
+			}
+			.Slides {display:none;}
+			.title {
+    			background-color: #07112a !important;
+    			color: #a8b7d8;
+    			font-family: 'Antic Didone';
+    			font-size:18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li><a class="title" href="Hoorcreations.html">Hoorcreations</a></li>
+  			<li><a href="Jewelry.html">Jewelry</a></li>
+  			<li><a href="#contact">Contact Us</a></li>
+		</ul>
+		<div class="w3-content w3-section" style="max-width:400px">
+  			<img class="Slides" src="2.jpg" style="width:50%">
+  			<img class="Slides" src="1.jpg" style="width:50%">
+		</div>
+
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+   				var i;
+    			var x = document.getElementsByClassName("Slides");
+    			for (i = 0; i < x.length; i++) {
+       				x[i].style.display = "none";  
+    			}
+    			myIndex++;
+    			if (myIndex > x.length) {myIndex = 1}    
+    			x[myIndex-1].style.display = "block";  
+    			setTimeout(carousel, 5000); // Change image every 5 seconds
+			}
+		</script>
+	</body>
+</html>
